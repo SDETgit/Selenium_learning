@@ -5,6 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
   <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
@@ -23,5 +24,12 @@
   		<artifactId>Selenium_Learning</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	<!-- Source: https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+<dependency>
+    <groupId>ru.yandex.qatools.ashot</groupId>
+    <artifactId>ashot</artifactId>
+    <version>1.5.4</version>
+    <scope>compile</scope>
+</dependency>
   </dependencies>
 </project>
