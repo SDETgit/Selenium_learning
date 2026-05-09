@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Loan department" parallel="tests" thread-count="6">
+	<test  name="Personal Loan	" parallel="classes" thread-count="6">
+		<!-- <test  name="Personal Loan	" parallel="methods" thread-count="6"> -->
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://example.com" />
+		<groups>
+			<run>
+				<include name="Smoke"></include>
+				<exclude name="Regression"></exclude>
+			</run>
+		</groups>
+
+
+		<classes >
+			<!--  <class name="S013_Test_NG.S002_TestNG2"/> -->
+			<class name="S013_Test_NG.S001_TestNG1" />
+			<class name="S013_Test_NG.S002_TestNG2">
+				<methods>
+					<!-- <include name="APITest"> </include> -->
+					<!--	<include name="Web.*"></include> -->
+				</methods>
+			</class>
+		</classes>
+	</test> <!--
+	Test -->
+
+	<test name="Car Loan ">
+
+
+		<classes>
+			<class name="S013_Test_NG.S003_CarLoan">
+				<methods>
+					<!--<exclude name="CarLoan1"></exclude>-->
+				</methods>
+
+
+			</class>
+		</classes>
+
+	</test>
+
+</suite> <!--
+Suite -->

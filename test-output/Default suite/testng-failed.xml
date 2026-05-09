@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="S010_Java_Streams.S002_Java_Streams2">
+      <class name="S013_Test_NG.S002_TestNG2">
         <methods>
-          <include name="streams"/>
+          <include name="WebTest1"/>
         </methods>
-      </class> <!-- S010_Java_Streams.S002_Java_Streams2 -->
+      </class> <!-- S013_Test_NG.S002_TestNG2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
