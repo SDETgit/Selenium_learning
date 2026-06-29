@@ -20,33 +20,13 @@ public class S001_username_password_website {
 		// TODO Auto-generated method stub
 		WebDriver driver = new ChromeDriver();
 
-		driver.get("https://money.rediff.com/gainers/bse/daily/groupall");
+		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
-		driver.manage().window().setPosition(new Point(50,190));
-		driver.manage().window().setSize(new Dimension(104, 19));
 		
-		// This is applied globally to all instances of driver
-		// it will wait for 5 seconds atleasr before thowing the error
 
 		
-	List<WebElement> links = 	driver.findElements(By.tagName("a"));
-
-	for(WebElement a : links)
-	{
-		if(a.getText().equalsIgnoreCase("Money"))
-		{
-			a.getCssValue("color");
-			System.out.println(a.getCssValue("color")+" location "+a.getLocation()+" size "+a.getSize()+" React "+a.getRect());
-			a.click();
-			
-		break;}
-		//System.out.println(a.getAttribute("href"));
-	}
-	System.out.println(links.size());
 	
-	//rgba(87, 87, 87, 1)
-	//407
 	}
 	
 }

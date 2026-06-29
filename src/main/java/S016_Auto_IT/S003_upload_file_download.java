@@ -37,7 +37,7 @@ public class S003_upload_file_download {
 		ChromeOptions options = new ChromeOptions();
 
 		options.setExperimentalOption("prefs", chromePrefs);
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(options);
 
 		driver.get("https://www.ilovepdf.com/jpg_to_pdf");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

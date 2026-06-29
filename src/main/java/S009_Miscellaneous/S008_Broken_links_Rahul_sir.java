@@ -44,22 +44,20 @@ public class S008_Broken_links_Rahul_sir {
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		SoftAssert a = new SoftAssert();
 		for (WebElement link : links) {
-			 String url= link.getAttribute("href");
+			String url = link.getAttribute("href");
 
-	         
+			HttpURLConnection conn = (HttpURLConnection) new URI(url).toURL().openConnection();
+			conn.setRequestMethod("HEAD");
 
-	          HttpURLConnection conn = (HttpURLConnection) new URI(url).toURL().openConnection();
-	          conn.setRequestMethod("HEAD");
+			conn.connect();
 
-	          conn.connect();
+			int respCode = conn.getResponseCode();
 
-	          int respCode = conn.getResponseCode();
+			System.out.println(respCode);
 
-	          System.out.println(respCode);
+			a.assertTrue(respCode < 400, "The link with Text" + link.getText() + " is broken with code" + respCode);
 
-	          a.assertTrue(respCode<400, "The link with Text"+link.getText()+" is broken with code" +respCode);
-
-	         }
+		}
 		a.assertAll();
 	}
 }
